@@ -40,7 +40,7 @@ Comment on why you write the piece of code in the way you write it instead of ju
 
 ### Clarification
 
-Sometimes, there are some external APIs in your code that you cannot alter, then commenting it will be helpful. 
+Sometimes, there are some external APIs in your code that you cannot alter to make it more experssive. In this case, comment your code to clarify its purpose.
 
 ```cpp
 // Check if "Pick up Tony at 5 P.M." is in the todo_list
