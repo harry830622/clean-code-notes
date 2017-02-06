@@ -4,11 +4,11 @@ The proper use of comments is to compensate the **failure** to express ourselves
 
 ---
 
-Comments can lie. The older they are, the more likely they are wrong. Because we just cannot maintain them while improving and updating our code.
+Comments can **lie**. The older they are, the more likely they are wrong. Because we just cannot maintain them while improving and updating our code.
 
 ## Comments do NOT make up for bad code
 
-If you find your code a mess, **clean it** instead of adding comments!
+If you find your code a mess, **clean** it instead of adding comments!
 
 ## Explain yourself in code
 
