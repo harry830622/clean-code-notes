@@ -10,20 +10,42 @@ If you find your code a mess, **clean it** instead of adding comments!
 
 ## Explain yourself in code
 
-A piece of code with comments:
+A piece of code with a comment:
+
+```cpp
+// Check if the shape is a square
+if (shape.top_edge_.length_ == shape.bottom_edge_.length_ &&
+    shape.right_edge_.length_ == shape.left_edge_.length_ &&
+    shape.top_edge_.length_ == shape.left_edge_.length_ &&
+    shape.top_left_angle_ == 90)
+```
+
+Cleaner one without a comment:
+
+```cpp
+if (shape.IsRectangle())
+```
+
+## Good comments
+
+### Legal comments
+
+Such as copyright or authorship statements.
+
+### Informative comments
+
+### Explanation of intent
+
+Comment on why you write the piece of code in the way you write it instead of just briefing what it does.
+
+### Clarification
+
+Sometimes, there are some external APIs in your code that you cannot alter, then commenting it will be helpful. 
 
 ```cpp
 // Check if "Pick up Tony at 5 P.M." is in the todo_list
 if (todo_list.find("Pick up Tony at 5 P.M.") != todo_list.end())
 ```
-
-Cleaner one without comments:
-
-```cpp
-if (todo_list.includes("Pick up Tony at 5 P.M."))
-```
-
-## Good comments
 
 
 
