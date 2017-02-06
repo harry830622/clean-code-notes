@@ -33,6 +33,10 @@ Such as copyright or authorship statements.
 
 ### Informative comments
 
+Provide basic information.
+
+> It's the least desirable form IMO.
+
 ### Explanation of intent
 
 Comment on why you write the piece of code in the way you write it instead of just briefing what it does.
@@ -48,9 +52,11 @@ if (todo_list.find("Pick up Tony at 5 P.M.") != todo_list.end())
 
 ### Warning of consequences
 
+For example, warn others if a function might spend too much time or even run out of memory.
+
 ### TODO comments
 
-They are like reminders. Just remember to check them regularly to eliminate completed ones.
+They are like reminders. Just remember to check them regularly to eliminate the completed ones.
 
 ### Amplification
 
@@ -65,7 +71,7 @@ function addUser(userName) {
 }
 ```
 
-### Publuc APIs
+### Public APIs
 
 
 
