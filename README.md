@@ -1,3 +1,4 @@
-# My Awesome Book
+# Clean Code Notes
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+Start reading Clean Code by Robert Cecil Martin on Feb, 3 2017. The purpose of this book is to write down some notes along the way.
+
