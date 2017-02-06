@@ -15,17 +15,14 @@ If you find your code a mess, **clean it** instead of adding comments!
 A piece of code with a comment:
 
 ```cpp
-// Check if the shape is a square.
-if (shape.top_edge_.length_ == shape.bottom_edge_.length_ &&
-    shape.right_edge_.length_ == shape.left_edge_.length_ &&
-    shape.top_edge_.length_ == shape.left_edge_.length_ &&
-    shape.top_left_angle_ == 90)
+// Check if the rectangle is a square.
+if (rectangle.TopEdgeLength() == rectangle.LeftEdgeLength())
 ```
 
 Cleaner one without a comment:
 
 ```cpp
-if (shape.IsRectangle())
+if (rectangle.IsSquare())
 ```
 
 ## Good comments
@@ -69,8 +66,6 @@ function addUser(userName) {
 ```
 
 ### Publuc APIs
-
-
 
 
 
