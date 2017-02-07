@@ -1,0 +1,89 @@
+= Comments
+
+[quote, Robert C. Martin]
+____
+The proper use of comments is to compensate the *failure* to express ourselves
+in code.
+____
+
+'''
+
+Comments can *lie*. The older they are, the more likely they are wrong. Because
+we just cannot maintain them while improving and updating our code.
+
+== Comments Do Not Make Up for Bad Code
+
+If you find your code a mess, *clean* it instead of adding comments.
+
+== Explain Yourself in Code
+
+For example, improve the code below
+
+[source, cpp]
+----
+// Check if the rectangle is a square.
+if (rectangle.TopEdgeLength() == rectangle.LeftEdgeLength())
+----
+
+into a cleaner version,
+
+[source, cpp]
+----
+if (rectangle.IsSquare())
+----
+
+== Good Comments
+
+=== Legal Comments
+
+Such as copyright or authorship statements.
+
+=== Informative Comments
+
+Provide basic information.
+
+____
+It\'s the least desirable form IMO.
+____
+
+=== Explanation of Intent
+
+Comment on *why* you write the piece of code in the way you write it instead of
+just briefing what it does.
+
+=== Clarification
+
+Sometimes, there are some external APIs in your code that you cannot alter to
+make it more experssive. In this case, comment your code to clarify its purpose.
+
+[source, cpp]
+----
+// Check if "Pick up Tony at 5 P.M." is in the todo_list.
+if (todo_list.find("Pick up Tony at 5 P.M.") != todo_list.end())
+----
+
+=== Warning of Consequences
+
+For example, warn others if a function might spend too much time or even run out
+of memory.
+
+=== TODO Comments
+
+They are like reminders. Just remember to check them regularly to eliminate the
+completed ones.
+
+=== Amplification
+
+Emphasize the detail that might seems not important.
+
+[source, javascript]
+----
+function addUser(userName) {
+  // userName must be trimmed to avoid invalid names such as '   '.
+  if (userName.trim().length !== 0) {
+    // do something...
+  }
+}
+----
+
+=== Public APIs
