@@ -1,0 +1,6 @@
+= Summary
+
+. link:chapter-1.adoc[Clean Code]
+. link:chapter-2.adoc[Meaningful Names]
+. link:chapter-3.adoc[Functions]
+. link:chapter-4.adoc[Comments]

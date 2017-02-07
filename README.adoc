@@ -1,0 +1,7 @@
+= Clean Code Notes
+
+My notes for _Clean Code_ <<clean>>.
+
+[bibliography]
+- [[[clean]]] Martin, Robert C. Clean code: a handbook of agile software
+  craftsmanship. Pearson Education, 2009.
