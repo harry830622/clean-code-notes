@@ -2,8 +2,8 @@
 
 [quote, Robert C. Martin]
 ____
-The proper use of comments is to compensate the *failure* to express ourselves
-in code.
+The proper use of comments is to compensate the *failure* to express ourself in
+code.
 ____
 
 '''

@@ -1,1 +1,85 @@
 = Clean Code
+
+[quote, Dave LeBlanc]
+____
+Later equals *never*.
+____
+
+'''
+
+== The Total Cost of Owning a Mess
+
+Messy code is harder to understand and even modified by others, hurting the
+productivity of the team a lot.
+
+== Attitude
+
+Tell managers the truth. It is your responsibility to keep the code clean. Just
+like a doctor, do the right thing for your patients even if they don\'t like it.
+Because we are all *professionals*.
+
+== The Primal Conundrum
+
+* Previous messes slow us down.
+// Forced to use raw HTML tag as a workaround. See
+// https://github.com/asciidoctor/asciidoctor/issues/1030 for details.
+* +++<del>We make mess in order to meet deadlines.</del>+++
+
+The only way to go fast is to keep the code as clean as possible at all times.
+
+== What is Clean Code
+
+[quote, Bjarne Stroustrup]
+____
+Clean code does *one* thing well.
+____
+
++++<br />+++
+
+[quote, Grady Booch]
+____
+Clean code reads like a well-written prose.
+____
+
++++<br />+++
+
+[quote, Dave Thomas]
+____
+Clean code can be read and enhanced by a developer other than its original
+author.
+____
+
++++<br />+++
+
+[quote, Michael Feathers]
+____
+Clean code always looks like it was written by someone who *cares*.
+____
+
++++<br />+++
+
+[quote, Ward Cunningham]
+____
+You know you are working on clean code when each routine you read turns out to
+be pretty much what you expected.
+____
+
+'''
+
+Clean code should
+
+* be elegant and pleasing to read.
+* be simple and efficient.
+* provide only one way to do one thing.
+* have unit tests.
+* have minimal dependencies.
+* contain no duplication.
+
+=== The Metaphor of Broken Windows
+
+A building with broken windows is like messy code. It looks like nobody cares
+about it, so people stop caring. Eventually the code just breaks.
+
+=== The Boy Scout Rule
+
+Leave the campground cleaner than you found it.
