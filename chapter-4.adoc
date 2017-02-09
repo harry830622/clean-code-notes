@@ -17,7 +17,7 @@ If you find your code a mess, *clean* it instead of adding comments.
 
 == Explain Yourself in Code
 
-For example, improve the code below
+For example, improve the code below:
 
 [source, cpp]
 ----
@@ -25,7 +25,7 @@ For example, improve the code below
 if (rectangle.TopEdgeLength() == rectangle.LeftEdgeLength())
 ----
 
-into a cleaner version,
+into a cleaner version:
 
 [source, cpp]
 ----

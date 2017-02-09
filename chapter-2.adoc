@@ -1,1 +1,61 @@
 = Meaningful Names
+
+== Use Intention-Revealing Names
+
+The name of a variable, function, or class should tell you
+
+* why it exists.
+* what is does.
+* how it is used.
+
+For example, comparing this one:
+
+[source, cpp]
+----
+int enemies = 10; // Record the number of remaining enemies.
+----
+
+with this one:
+
+[source, cpp]
+----
+int num_remaining_enemies = 10;
+----
+
+Obviously, the second one, which is expressive without a comment, is much
+better.
+
+== Avoid Disinformation
+
+* Does it imply its type? +
+  `pointVector` +
+  => `std::vector<Point>` ?
+* How to quickly spot their difference? +
+  `NTUPlacerForEfficientPlacingOfMacros` +
+  `NTUPlacerForEfficientRoutingOfMacros`
+* WTF? +
+  `if (O == l)` +
+  `if (O == 1)` +
+  `if (0 == l)` +
+  `if (0 == 1)`
+
+== Make Meaningful Distinctions
+
+* Do not use number-series +
+  `a1, a2, ..., aN`
+* Do not add noise words +
+  `Product` +
+  `ProductInfo` +
+  `ProductData`
+
+== Use Pronounceable Names
+
+== Use Searchable Names
+
+== Avoid Encodings
+
+== Avoid Metal Mapping
+
+== Class Names
+
+== Method Names
