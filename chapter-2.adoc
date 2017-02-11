@@ -1,4 +1,6 @@
 = Meaningful Names
+:google_cpp_style_guide_url: https://google.github.io/styleguide/cppguide.html
+:abc_url: https://bitbucket.org/alanmi/abc
 
 == Use Intention-Revealing Names
 
@@ -28,8 +30,7 @@ better.
 == Avoid Disinformation
 
 * Does it imply its type? +
-  `pointVector` +
-  => `std::vector<Point>` ?
+  `pointVector` => `std::vector<Point>` ?
 * How to quickly spot their difference? +
   `NTUPlacerForEfficientPlacingOfMacros` +
   `NTUPlacerForEfficientRoutingOfMacros`
@@ -50,12 +51,125 @@ better.
 
 == Use Pronounceable Names
 
+Good for communications.
+
+For example, +
+"`Hey, Nady, What's the purpose of class `CustmrRcrd`?`" vs +
+"`Hey, Nady, What's the purpose of class `CustomerRecord`?`"
+
 == Use Searchable Names
+
+Do not use single-letter name and numerics constants.
+
+____
+Personally, I use single-letter names only in the following situations:
+
+* Loop control variables
+
+[source, cpp]
+----
+for (int i = 0; i < 10; ++i)
+----
+
+* Math symbols
+
+[source, python]
+----
+from sympy import Symbol, limit, oo
+n = Symbol("n")
+e = limit((1 + 1 / n) ** n, n, oo) # Euler's number
+----
+____
 
 == Avoid Encodings
 
-== Avoid Metal Mapping
+Do not encoding type or scope information into names.
+
+For example,
+
+* no Hungarian notation.
+* no member prefix (or suffix), such as `m_` or `_m`.
+
+____
+However, I prefer to append an underscore to a member variable.
+footnote:[Usually, I follow link:{google_cpp_style_guide_url}#Variable_Names[Google
+C++ style guide].]
+
+[source, cpp]
+----
+class Person {
+  std::string name_;
+  int age_;
+};
+----
+____
+
+== Avoid Mental Mapping
+
+Do not show off your smart.
+
+For example, use `pswd_8aAd` to represent a password which must have at least
+
+* 8 lower-case alphabet
+* 1 upper-case alphabet
+* 1 digit
+
+Can you see the logic behind this name instantly?
+
+Be professional: *Clarity* is king.
 
 == Class Names
 
+Do use a *noun*.
+
+Avoid words like `Manager`, `Processor`, `Data` and `Info`.
+
+____
+Nevertheless, I have seen some code containing classes with `Manager` in their
+names, and it still works great. For example, link:{abc_url}[ABC], a program
+that I recently used, has some type names ended with `Man`, and not only is it
+well-maintained, but also improved constantly. Therefore, I don't think that
+using `Manager` in names should be prohibited strictly, yet it should not be
+abused. I think the proper scenario to use it would be a container-like class.
+For example, if you need a class to manage resources like `Circuit` objects, and
+there is no logically right name for the class, picking `CircuitsManager` would
+be a proper last resort IMO.
+____
+
 == Method Names
+
+Do start with a *verb*.
+
+____
+I prefer to name accessors and mutators in the following way:
+
+[source, cpp]
+----
+Vertex source;
+source.SetName("s");
+source.Name(); // s
+source.IsVisited(); // false
+----
+____
+
+== Don't Be Cute
+
+Do not try to be humorous.
+
+For example, choose `DeleteTable()` over `Boom()`.
+
+== Pick One Word per Concept
+
+Do choose *only* one word for a concept.
+
+For example,
+
+* `retrieve`, `fetch` or `get`
+* `display`, `show` or `print`
+* ``
+
+____
+load Promise
+____
+
+== Don't Pun

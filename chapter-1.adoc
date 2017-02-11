@@ -75,7 +75,7 @@ Clean code should
 * have minimal dependencies.
 * contain no duplication.
 
-=== The Metaphor of Broken Windows
+=== The Broken Windows Metaphor
 
 A building with broken windows is like messy code. It looks like nobody cares
 about it, so people stop caring. Eventually the code just breaks.

@@ -43,7 +43,7 @@ Such as copyright or authorship statements.
 Provide basic information.
 
 ____
-It\'s the least desirable form IMO.
+It's the least desirable form IMO.
 ____
 
 === Explanation of Intent
