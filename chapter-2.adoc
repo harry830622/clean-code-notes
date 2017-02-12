@@ -1,6 +1,7 @@
 = Meaningful Names
 :google_cpp_style_guide_url: https://google.github.io/styleguide/cppguide.html
 :abc_url: https://bitbucket.org/alanmi/abc
+:promise_naming_url: http://stackoverflow.com/questions/14267346/javascript-naming-convention-for-promises
 
 == Use Intention-Revealing Names
 
@@ -146,8 +147,8 @@ I prefer to name accessors and mutators in the following way:
 [source, cpp]
 ----
 Vertex source;
-source.SetName("s");
-source.Name(); // s
+source.SetName("src");
+source.Name(); // "src"
 source.IsVisited(); // false
 ----
 ____
@@ -169,7 +170,11 @@ For example,
 * ``
 
 ____
-load Promise
+Recently, I start learning `Promise` in JavaScript, having a hard time coming up
+a rational naming rule for functions that return `Promise`. The returned
+`Promise` holds the result that you just cannot get it right after calling the
+function. After googling around, I finally found a
+link:{promise_naming_url}[solution] on StackOverflow.
 ____
 
 == Don't Pun
