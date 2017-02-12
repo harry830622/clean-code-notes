@@ -130,11 +130,11 @@ Nevertheless, I have seen some code containing classes with `Manager` in their
 names, and it still works great. For example, link:{abc_url}[ABC], a program
 that I recently used, has some type names ended with `Man`, and not only is it
 well-maintained, but also improved constantly. Therefore, I don't think that
-using `Manager` in names should be prohibited strictly, yet it should not be
+using `Manager` in names should be prohibited completely, yet it should not be
 abused. I think the proper scenario to use it would be a container-like class.
 For example, if you need a class to manage resources like `Circuit` objects, and
 there is no logically right name for the class, picking `CircuitsManager` would
-be a proper last resort IMO.
+be acceptable. It's a last resort IMO though.
 ____
 
 == Method Names
@@ -167,14 +167,26 @@ For example,
 
 * `retrieve`, `fetch` or `get`
 * `display`, `show` or `print`
-* ``
+* `eliminate`, `remove` or `delete`
 
 ____
 Recently, I start learning `Promise` in JavaScript, having a hard time coming up
-a rational naming rule for functions that return `Promise`. The returned
-`Promise` holds the result that you just cannot get it right after calling the
-function. After googling around, I finally found a
-link:{promise_naming_url}[solution] on StackOverflow.
+a rational naming rule for functions that return `Promise`. The reason why it is
+so difficult to name these functions is that we usually want to _get_ a result
+from calling them. However, instead of getting the result we want immediately,
+we get a `Promise`, an object that will give you the result only at some point.
+So what the function return is essentially a result that is still _loading_.
+
+Here is a solution that may be somehow desirable.footnote:[It's the best
+link:{promise_naming_url}[suggestion] AFAIK.]
+
+[source, javascript]
+----
+const imageLoading = loadImage(url);
+imageLoading
+  .then(onFulfillment)
+  .catch(onRejection);
+----
 ____
 
 == Don't Pun
