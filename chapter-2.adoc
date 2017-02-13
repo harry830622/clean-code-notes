@@ -2,6 +2,16 @@
 :google_cpp_style_guide_url: https://google.github.io/styleguide/cppguide.html
 :abc_url: https://bitbucket.org/alanmi/abc
 :promise_naming_url: http://stackoverflow.com/questions/14267346/javascript-naming-convention-for-promises
+:footnote_style: Usually, I follow link:{google_cpp_style_guide_url}#Variable_Names[Google C++ style guide].
+:footnote_promise: It's the best link:{promise_naming_url}[suggestion] AFAIK.
+
+[quote, Phil Karlton]
+____
+There are only two hard things in Computer Science: cache invalidation and
+*naming* things.
+____
+
+'''
 
 == Use Intention-Revealing Names
 
@@ -93,8 +103,7 @@ For example,
 
 ____
 However, I prefer to append an underscore to a member variable.
-footnote:[Usually, I follow link:{google_cpp_style_guide_url}#Variable_Names[Google
-C++ style guide].]
+footnote:[{footnote_style}]
 
 [source, cpp]
 ----
@@ -177,8 +186,7 @@ from calling them. However, instead of getting the result we want immediately,
 we get a `Promise`, an object that will give you the result only at some point.
 So what the function return is essentially a result that is still _loading_.
 
-Here is a solution that may be somehow desirable.footnote:[It's the best
-link:{promise_naming_url}[suggestion] AFAIK.]
+Here is a solution that may be somehow desirable.footnote:[{footnote_promise}]
 
 [source, javascript]
 ----
@@ -190,3 +198,52 @@ imageLoading
 ____
 
 == Don't Pun
+
+Do not use the same word for two different ideas.
+
+Beware of the *consistency trap*. For instance,
+
+[source, cpp]
+----
+class Sequence {
+ public:
+  Sequence(const std::vector<int>& numbers) : numbers_(numbers), sum_(0) {}
+
+  void AddNumber(int n) {
+    sum_ += n;
+  }
+
+  void AddElement(int n) { // AppendElement is better.
+    numbers_.push_back(n);
+  }
+
+ private:
+  std::vector<int> numbers_;
+  int sum_;
+};
+----
+
+== Use Solution Domain Names
+
+Do use computer science terms, algorithm names, pattern names, math terms, and
+so forth.
+
+== Use Problem Domain Names
+
+Only when there is no corresponding solution domain name for the problem.
+
+== Add Meaningful Context
+
+Some common approaches:
+
+* Extract into a separate class +
+  `state` => `class Address { std::string state_; };`
+* Add prefix +
+  `state` => `address_state`
+
+However, the second method is not recommended.
+
+== Don't Add Gratuitous Context
+
+For example, `account_address` and `customer_address` are fine names for
+instances of class `Address`, but could be bad names for classes.
