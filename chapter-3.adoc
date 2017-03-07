@@ -1,1 +1,44 @@
 = Functions
+
+[quote, Robert C.Martin]
+____
+Functions should do one thing. They should do it well. They should do it only.
+____
+
+'''
+
+== Small!
+
+Functions should
+
+* be small.
+* be smaller than that.
+* contain no indentation whose level is greater than two.
+
+== Do One Thing
+
+Describe *steps* instead of things.
+
+But _how_?
+
+== One Level of Abstraction per Function
+
+Use *The Stepdown Rule*.
+
+=== The Stepdown Rule
+
+Read the program as a set of _TO_ paragraphs.
+
+For example,
+
+[source, cpp]
+----
+----
+
+A function should contain no _TO_ paragraph deeper than two levels.
+
+Refactor the example above to
+
+[source, cpp]
+----
+----
